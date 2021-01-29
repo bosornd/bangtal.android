@@ -46,3 +46,6 @@ target_link_libraries( # Specifies the target library.
                        # Links the target library to the log library
                        # included in the NDK.
                        ${log-lib} )
+
+target_include_directories(native-lib PUBLIC $ENV{BANGTAL_HOME}/include/)
+target_link_libraries(native-lib $ENV{BANGTAL_HOME}/lib/android/${CMAKE_BUILD_TYPE}/${CMAKE_ANDROID_ARCH_ABI}/libBangtal.so)

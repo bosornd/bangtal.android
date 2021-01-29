@@ -40,6 +40,8 @@ android {
 }
 
 dependencies {
+    debugImplementation fileTree(dir: System.getenv('BANGTAL_HOME') + '/lib/android/debug', include: ['*.aar'])
+    releaseImplementation fileTree(dir: System.getenv('BANGTAL_HOME') + '/lib/android/release', include: ['*.aar'])
 
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
